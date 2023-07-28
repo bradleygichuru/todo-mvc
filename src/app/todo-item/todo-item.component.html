@@ -1,0 +1,20 @@
+<div class="flex flex-row">
+  <div class="m-2 card w-96 bg-base-100 shadow-xl">
+
+  <div class="card-body">
+    <h2 class="card-title">Todo</h2>
+    <p>{{todo.name}}</p>
+    <div class="card-actions items-center justify-end">
+
+<button class="m-1 btn btn-outline" type="button" (click)="removeTodo()" >Remove</button>
+<div class="form-control">
+  <label class="label cursor-pointer">
+    <span class="label-text m-1">Done</span>
+  <input type="checkbox" class="checkbox checkbox-success" (click)="done()" [checked]="todo.done"/>
+  </label>
+</div>
+    </div>
+  </div>
+</div>
+
+</div>
