@@ -8,7 +8,7 @@
 <input id="name" type="text" [formControl]="name" class="m-1 input input-bordered w-full max-w-xs">
 <button class="m-1 btn btn-outline" type="button" (click)="addTodo()" >Add</button>
 <div class="flex flex-row" *ngFor="let todo of todos">
-  <app-todo-item (todoDone)="complete($event)" (removeTodoEvent)="removeTodo($event)" [todo]="todo"></app-todo-item>
+  <app-todo-item (todoDone)="complete($event)" (editNameEvent)="saveTodoName($event)" (removeTodoEvent)="removeTodo($event)" [todo]="todo"></app-todo-item>
 </div>
 
 </div>

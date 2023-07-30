@@ -29,4 +29,16 @@ export class LearningAngularComponent {
     })
 
   }
+  saveTodoName(payload: { oldName: string; newName: string; }){
+    console.log(payload);
+    this.todos = this.todos.map((x) => {
+      if (x.name == payload.oldName) {
+        x.name = payload.newName;
+        return x;
+      } else {
+        return x;
+      }
+    })
+
+  }
 }
